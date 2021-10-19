@@ -1,0 +1,47 @@
+{
+    "python.autoComplete.extraPaths": [
+        "ur rosenv packages folder, eg. /home/smurodev/.conda/envs/rosenv/lib/python3.8/site-packages",
+        "ros ws packagess ${workspaceFolder}/devel/lib/python3/dist-packages",
+        "ros distro packages/opt/ros/${ROS_DISTRO}/lib/python3/dist-packages"
+    ],
+    "python.condaPath": "/usr/local/anaconda3/bin/conda",
+    "python.pythonPath": "/home/smurodev/.conda/envs/rosenv/bin/python3",
+    "cmake.sourceDirectory": "${workspaceFolder}/src",
+    "cmake.buildBeforeRun": true,
+    "cmake.configureArgs": [
+        "-DCATKIN_DEVEL_PREFIX=${workspaceFolder}/devel",
+        "-DCMAKE_INSTALL_PREFIX=${workspaceFolder}/install",
+    ],
+    "cmake.environment": {
+        "CATKIN_DEVEL_PREFIX": "${workspaceFolder}/devel",
+        "CMAKE_INSTALL_PREFIX": "${workspaceFolder}/install",
+        "PKG_CONFIG_PATH": "/opt/ros/${ROS_DISTRO}/lib/pkgconfig",
+        "PYTHONPATH": "/home/smurodev/.conda/envs/rosenv/bin",
+        "ROS_VERSION": "1",
+        "ROS_DISTRO": "${ROS_DISTRO}",
+        "CMAKE_PREFIX_PATH": "/home/smurodev/.conda/envs/rosenv/bin/python3:/opt/ros/${ROS_DISTRO}",
+        "ROS_PACKAGE_PATH": "/opt/ros/${ROS_DISTRO}/share",
+        "ROS_PYTHON_VERSION": "3",
+        "ROS_ETC_DIR": "/opt/ros/${ROS_DISTRO}/etc/ros",
+        "LD_LIBRARY_PATH": "/opt/ros/${ROS_DISTRO}/lib",
+        "ROS_ROOT": "/opt/ros/${ROS_DISTRO}/share/ros",
+        "ROS_MASTER_URI": "http://localhost:11311",
+        "ROSLISP_PACKAGE_DIRECTORIES": "/usr/bin/env",
+        "PATH": "/home/smurodev/.conda/envs/rosenv/bin:/opt/ros/${ROS_DISTRO}/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+        "PWD": "/opt/ros/${ROS_DISTRO}",
+        "SHLVL": "1"
+    },
+    "cmake.buildDirectory": "${workspaceFolder}/build",
+    "cmake.generator": "Unix Makefiles",
+    "cmake.buildEnvironment": {
+        "CATKIN_DEVEL_PREFIX": "${workspaceFolder}/devel",
+        "CMAKE_INSTALL_PREFIX": "${workspaceFolder}/install"
+    },
+    "ros.distro": "${ROS_DISTRO}",
+    "files.associations": {
+        "dense": "cpp",
+        "lu": "cpp",
+        "core": "cpp"
+    },
+    "terminal.integrated.defaultProfile.linux": "rosenv"
+}
